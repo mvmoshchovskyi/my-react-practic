@@ -1,10 +1,11 @@
 import React from 'react';
 import {MyContext} from "../context";
-import {useHistory} from 'react-router-dom'
+import {useHistory, useLocation} from 'react-router-dom'
 
-const EditUser = (props) => {
-    const {id, name, email} = props.location.state.data
-
+const EditUser = () => {
+      let  location = useLocation()
+     const {id, name, email} = location.state.data
+    console.log('location',location)
     const {onEdit} = React.useContext(MyContext)
     const [formData, setFormData] = React.useState({id,name,email})
     let history = useHistory()

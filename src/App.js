@@ -67,8 +67,7 @@ function App() {
                     <Route exact path='/counter'><Counter/></Route>
                     <Route exact path='/post/:id'><PostDetail/></Route>
                     <Route exact path='/add'><AddUser/></Route>
-                    {/*<Route exact path='/edit'><EditUser/></Route>*/}
-                    <Route path="/edit" render={(props) => (<EditUser {...props} posts={posts}/>)}/>
+                    <Route exact path='/edit'><EditUser/></Route>
                     <Route path='*'><NotFoundPage/></Route>
                 </Switch>
                 <Footer></Footer>
